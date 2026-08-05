@@ -6,6 +6,9 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout repo
+        uses: actions/checkout@v4  
+        # // otherwise dont work without actions ( no ls show so error on readme)
       - name: WELCOME MSG
         run: echo "MY first workflow"
 
